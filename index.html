@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Grocery Store</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+</head>
+<body>
+
+<!-- header section starts -->
+
+<header id="home" class="header">
+    <a class="logo" href="#"> <i class="fa-solid fa-basket-shopping"></i> groco</a>
+
+    <nav class="navbar">
+        <a href="#home">home</a>
+        <a href="#features">features</a>
+        <a href="#products">products</a>
+        <a href="#categories">categories</a>
+        <a href="#review">review</a>
+        <a href="#">blogs</a>
+    </nav>
+
+    <div class="icons">
+        <div id="menu-btn"><i class="fa-solid fa-bars"></i></div>
+        <div id="login-btn"><i class="fa-solid fa-user"></i></div>
+        <div id="search-btn"><i class="fa-solid fa-magnifying-glass"></i></div>
+        <div id="cart-btn"  ><i class="fa-solid fa-cart-shopping"></i></div>
+    </div>
+
+    <form action="" class="search-form">
+        <input placeholder="Search here ..." type="text" id="search-box">
+        <label for="search-box" class="fa-solid fa-magnifying-glass" ></label>
+    </form>
+
+    <div class="shopping-cart">
+        <div class="box">
+            <i class="fa-solid fa-trash"></i>
+            <img src="https://w7.pngwing.com/pngs/312/397/png-transparent-watermelon-fruit-flavor-peeler-watermelon-natural-foods-food-sweetness.png">
+            <div class="content">
+                <h3>Watermellon</h3>
+                <span>Price : 4.99$</span>
+                <span>qty : 1</span>
+            </div>
+        </div>
+
+        <div class="box">
+            <i class="fa-solid fa-trash"></i>
+            <img src="chicken.jpg">
+            <div class="content">
+                <h3>Chicken</h3>
+                <span>Price : 2.99$</span>
+                <span>qty : 2</span>
+            </div>
+        </div>
+
+        <div class="box">
+            <i class="fa-solid fa-trash"></i>
+            <img src="onion.jpg">
+            <div class="content">
+                <h3>Onion</h3>
+                <span>Price : 1.99$</span>
+                <span>qty : 3</span>
+            </div>
+        </div>
+        <div class="total">Total : 20$</div>
+        <a class="btn" href="#">Checkout</a>
+    </div>
+
+    <form action="" class="login">
+        <h3>Login Now</h3>
+        <input type="text" placeholder="Username" class="box" >
+        <input type="password" placeholder="Password" class="box" >
+        <p>Forget your assword? <a href="#">reset password</a> </p>
+        <p>Don't have an account? <a href="#">create account</a> </p>
+        <input type="submit" value="Login now" class="btn" >
+    </form>
+
+</header>
+
+<!-- header section ends -->
+
+
+
+<!-- home section starts -->
+
+<section class="home" id="home">
+    
+    <div class="content">
+        <h3>fresh and <span>organics</span> products for you</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim facere earum voluptate sequi aliquid.
+            Distinctio exercitationem consequatur perspiciatis laborum dolor.</p>
+        <a class="btn" href="#">shop now</a>
+    </div>
+
+</section>
+
+<!-- home section end -->
+
+
+<!-- feature starts -->
+
+<section id="features" class="features">
+
+    <div class="heading">Our <span>Features</span> </div>
+
+    <div class="boxes">
+        <div class="box">
+            <figure>
+                <img src="fruitbasket.jpg">
+                <h3>Fresh and Organic</h3>
+                <figcaption>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos, dolore!</figcaption>
+            </figure>
+            <a class="btn" href="#">See more</a>
+        </div>
+    
+        <div class="box">
+            <figure>
+                <img src="https://cdn2.iconfinder.com/data/icons/roundify-payment-features/64/Roundify_Easy_Payment-512.png">
+                <h3>Easy Payments</h3>
+                <figcaption>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos, dolore!</figcaption>
+            </figure>
+            <a class="btn" href="#">See more</a>
+        </div>
+    
+        <div class="box">
+            <figure>
+                <img src="https://cdn-icons-png.flaticon.com/512/3043/3043312.png">
+                <h3>Free Delivery</h3>
+                <figcaption>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos, dolore!</figcaption>
+            </figure>
+            <a class="btn" href="#">See more</a>
+        </div>
+    </div>
+
+</section>
+
+<!-- feature ends -->
+
+
+<!-- products starts  -->
+
+<section id="products" class="products">
+
+    <div class="heading">Our <span>Products</span></div>
+    <div class="boxes">
+
+        <div class="box">
+            <img src="pro1.jpg">
+            <h3>fitness milk</h3>
+            <div class="price">2.99$</div>
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+            </div>
+            <div class="btn">Add to cart</div>
+        </div>
+
+        <div class="box">
+            <img src="pro2.jpg">
+            <h3>fitness milk</h3>
+            <div class="price">2.99$</div>
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+            </div>
+            <div class="btn">Add to cart</div>
+        </div>
+
+        <div class="box">
+            <img src="pro3.jpg">
+            <h3>fitness milk</h3>
+            <div class="price">2.99$</div>
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+            </div>
+            <div class="btn">Add to cart</div>
+        </div>
+
+        <div class="box">
+            <img src="pro4.jpg">
+            <h3>fitness milk</h3>
+            <div class="price">2.99$</div>
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+            </div>
+            <div class="btn">Add to cart</div>
+        </div>
+
+        <div class="box">
+            <img src="pro5.jpg">
+            <h3>fitness milk</h3>
+            <div class="price">2.99$</div>
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+            </div>
+            <div class="btn">Add to cart</div>
+        </div>
+
+        <div class="box">
+            <img src="pro6.jpg">
+            <h3>fitness milk</h3>
+            <div class="price">2.99$</div>
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+            </div>
+            <div class="btn">Add to cart</div>
+        </div>
+
+        <div class="box">
+            <img src="pro7.jpg">
+            <h3>fitness milk</h3>
+            <div class="price">2.99$</div>
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+            </div>
+            <div class="btn">Add to cart</div>
+        </div>
+
+        <div class="box">
+            <img src="pro8.jpg">
+            <h3>fitness milk</h3>
+            <div class="price">2.99$</div>
+            <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+            </div>
+            <div class="btn">Add to cart</div>
+        </div>
+
+    </div>
+</section>
+
+<!-- products ends  -->
+
+
+<!-- categories section starts  -->
+
+<section class="category" id="categories">
+    <div class="heading">
+        Our <span>Categories</span>
+    </div>
+    <div class="boxes-container">
+        <div class="box">
+            <img src="c1.webp">
+            <h3>Vegetables</h3>
+            <div class="off">Upto 45%</div>
+        <div class="btn">Shop Now</div>
+        </div>
+
+        <div class="box">
+            <img src="c2.jpg">
+            <h3>Vegetables</h3>
+            <div class="off">Upto 45%</div>
+        <div class="btn">Shop Now</div>
+        </div>
+
+        <div class="box">
+            <img src="c3.jpg">
+            <h3>Vegetables</h3>
+            <div class="off">Upto 45%</div>
+        <div class="btn">Shop Now</div>
+        </div>
+
+        <div class="box">
+            <img src="c4.webp">
+            <h3>Vegetables</h3>
+            <div class="off">Upto 45%</div>
+        <div class="btn">Shop Now</div>
+        </div>
+    </div>
+</section>
+
+<!-- categories section ends  -->
+
+<!-- review section starts  -->
+
+<section class="review" id="review">
+    
+    <div class="heading">Customer's <span>Review</span></div>
+
+    <div class="review-slider">
+
+        <div class="wrapper">
+
+            <div class="box">
+                <img src="person1.jpg">
+                <h3>John Deo</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, eligendi officia est nesciunt maxime tempora ad optio architecto cum quaerat!</p>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+            </div>
+
+            <div class="box">
+                <img src="person1.jpg">
+                <h3>John Deo</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, eligendi officia est nesciunt maxime tempora ad optio architecto cum quaerat!</p>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+            </div>
+
+            <div class="box">
+                <img src="person1.jpg">
+                <h3>John Deo</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, eligendi officia est nesciunt maxime tempora ad optio architecto cum quaerat!</p>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+    
+</section>
+
+<!-- review section ends  -->
+
+
+<!-- footer starts  -->
+
+<section class="footer">
+
+    <div class="box-container">
+
+        <div class="first box">
+            <a class="logo" href="#"> Groco <i class="fa-solid fa-basket-shopping"></i></a>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed, deleniti!</p>
+            <div class="social-links">
+                <div><i class="fa-brands fa-facebook"></i></div>
+                <div><i class="fa-brands fa-twitter"></i></div>
+                <div><i class="fa-brands fa-instagram"></i></div>
+                <div><i class="fa-brands fa-linkedin"></i></div>
+            </div>
+        </div>
+
+        <div class="second box">
+            <h3>Contact Info</h3>
+            <p><i class="fas fa-phone"></i>03345820974</p>
+            <p><i class="fas fa-phone"></i>03345820974</p>
+            <p><i class="fa-solid fa-envelope"></i>saimzaidi719@gmail.com</p>
+            <p><i class="fas fa-location"></i>Karachi</p>
+        </div>
+
+        <div class="third box">
+            <h3>Quick Links</h3>
+            <p><i class="fa-solid fa-arrow-right"></i> Home </p>
+            <p><i class="fa-solid fa-arrow-right"></i> Features </p>
+            <p><i class="fa-solid fa-arrow-right"></i> Products </p>
+            <p><i class="fa-solid fa-arrow-right"></i> Categories </p>
+            <p><i class="fa-solid fa-arrow-right"></i> Reviews </p>
+            <p><i class="fa-solid fa-arrow-right"></i> Blogs </p>
+        </div>
+
+        <div class="fourth box">
+            <h3>Newletter</h3>
+            <p>Subscribe for latest update</p>
+            <input placeholder="Your Email" type="text">
+            <div class="btn">Subscribe</div>
+            <div class="box-images">
+                <img src="card1.jpg">
+                <img src="card2.jpg">
+                <img src="card3.jpg">
+            </div>
+        </div>
+
+    </div>
+
+    <hr>
+
+    <div class="copyright">
+        Created by Saim Zaidi. All rights are reserved.
+    </div>
+
+</section>
+
+<!-- footer ends -->
+
+<script src="script.js" ></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,706 @@
+*{
+    margin: 0; padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    font-family: sans-serif;
+    transition: all .2s linear;
+}
+
+:root{
+    --orange: #ff7800;
+    --black: #130f40;
+    --light-color: #666;
+    --box-shadow: 0 .5rem 1rem rgba(0,0,0,0.1); 
+    --border: .2rem solid rgba(0,0,0,0.1);
+    --outline: .1rem solid rgba(0,0,0,0.1);
+}
+
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    scroll-padding-top: 7rem;
+}
+
+.heading{
+    text-align: center;
+    font-size: 4rem;
+    color: var(--black);
+    padding: 2rem 0;
+    padding-bottom: 3rem;
+}
+
+.heading span{
+    color: white;
+    background-color: var(--orange);
+    clip-path: polygon(100% 0, 93% 50%, 100% 99%, 0% 100%, 7% 50%, 0% 0%);
+    display: inline-block;
+    padding: 1rem 3rem;
+}
+
+body{
+    background-color: #eee;
+}
+
+.btn{
+    margin-top: 1rem;
+    display: inline-block;
+    font-size: 1.7rem;
+    border-radius: .5rem;
+    border: .2rem solid var(--black);
+    color: var(--black);
+    padding: .8rem 3rem;
+    cursor: pointer;
+}
+
+.btn:hover{
+    background-color: var(--orange);
+    color: #fff;
+}
+
+.header{
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #fff;
+    box-shadow: var(--box-shadow);
+    padding: 2rem 9%;
+}
+
+.header .logo{
+    font-size: 2.5rem;
+    font-weight: bolder;
+    color: var(--black);
+}
+
+.header .logo i{
+    color: var(--orange);
+} 
+
+.header .navbar a{
+    font-size: 1.7rem;
+    margin: 0 1rem;
+    color: var(--black);
+}
+
+.header .navbar a:hover{
+    color: var(--orange);
+}
+
+.header .icons div{
+    height: 4.5rem;
+    width: 4.5rem;
+    border-radius: .5rem;
+    background-color: #eee;
+    color: var(--black);
+    font-size: 2rem;
+    margin-right: .3rem;
+    text-align: center;
+    line-height: 4.5rem;
+    display: inline-block;
+}
+
+.header .icons div:hover{
+    background-color: var(--orange);
+}
+
+#menu-btn{
+    display: none;
+}
+
+.header .search-form{
+    position: absolute;
+    top: 110%;
+    right: -110%;
+    width: 50rem;
+    height: 5rem;
+    overflow: hidden;
+    box-shadow: var(--box-shadow);
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    border-radius: .5px;
+}
+
+.header .search-form.active{
+    right: 2rem;
+    transition: all .4s linear;
+}
+
+.header .search-form input{
+    width: 100%;
+    height: 100%;
+    text-transform: none;
+    border: none;
+    font-size: 1.6rem;
+    padding: 0 1.5rem;
+    box-shadow: var(--box-shadow);
+    color: var(--black);
+}
+
+.header .search-form label{
+    padding: 0 1.5rem;
+    font-size: 2.2rem;
+    color: var(--black);
+}
+
+.header .search-form label:hover{
+    color: var(--orange);
+}
+
+.header .shopping-cart{
+    position: absolute;
+    top: 110%;
+    right: -110%;
+    background-color: #fff;
+    width: 35rem;
+    box-shadow: var(--box-shadow);
+    border-radius: .5rem;
+    padding: 1rem;
+}
+
+.header .shopping-cart.active{
+    right: 2rem;
+    transition: all .4s ease;
+}
+
+.header .shopping-cart .box img{
+    width: 10rem;
+    height: 10rem;
+}
+
+.header .shopping-cart .box{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin: 1rem 0;
+    position: relative;
+}
+
+.header .shopping-cart .box i{
+    font-size: 2rem;
+    position: absolute;
+    right: 2rem;
+    color: var(--light-color);
+}
+
+.header .shopping-cart .box i:hover{
+    color: var(--orange);
+}
+
+.header .shopping-cart .box .content h3{
+    font-size: 1.7rem;
+    padding-bottom: 1rem;
+}
+
+.header .shopping-cart .box .content span{
+    font-size: 1.6rem;
+    color: var(--black);
+}
+
+.header .shopping-cart .total{
+    font-size: 2.5rem;
+    color: var(--black);
+    text-align: center;
+    padding: 1rem 0;
+}
+
+.header .shopping-cart .btn{
+    display: block;
+    text-align: center;
+}
+
+.login{
+    position: absolute;
+    top: 110%;
+    right: -110rem;
+    width: 30rem;
+    background-color: #fff;
+    border-radius: .5rem;
+    padding: 2rem;
+    box-shadow: var(--box-shadow);
+    text-align: center;
+}
+
+.login h3{
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    color: var(--black);
+}
+
+.login .box{
+    border-radius: 1rem;
+    margin: .7rem 0;
+    background-color: #eee;
+    font-size: 1.6rem;
+    color: var(--black);
+    width: 100%;
+    border: none;
+    height: 50px;
+    padding: 1rem;
+}
+
+.login p{
+    font-size: 1.2rem;
+    margin: 1rem 0;
+}
+
+.login .btn{
+    width: 100%;
+}
+
+.login.active{
+    right: 2rem;
+    transition: all .4s linear;
+}
+
+.home{
+    background-image: url("https://img.freepik.com/premium-photo/flat-lay-vegetables-white-background-food-diet-concept_169016-20424.jpg?w=2000");
+    background-size: cover;
+    padding-top: 20rem;
+    padding-bottom: 10rem;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.home .content{
+    text-align: center;
+    width: 60rem;
+}
+
+.home .content h3{
+    font-size: 3rem;
+    color: var(--black);
+}
+
+.home .content h3 span{
+    color: var(--orange);
+}
+
+.home .content p{
+    font-size: 1.7rem;
+    color: var(--light-color);
+    padding: 1rem;
+    line-height: 3rem;
+}
+
+.features .boxes{
+    display: flex;
+    padding: 2rem 9%;
+    justify-content: center;
+}
+
+.features .boxes .box{
+    background-color: #fff;
+    padding: 6rem 2rem;
+    box-shadow: var(--box-shadow);
+    text-align: center;
+    margin: 0 1rem;
+    margin-bottom: 20px;
+    outline: var(--outline);
+    outline-offset: -1rem;
+    flex-grow: 1;
+}
+
+.features .boxes .box figcaption{
+    line-height: 2rem;
+}
+
+
+.features .boxes .box:hover{
+    outline-offset: 0;
+    outline: .5rem solid rgba(0,0,0,0.1);
+}
+
+.features .boxes .box img{
+    width: 150px;
+}
+
+.features .boxes h3{
+    font-size: 2rem;
+    padding: 1rem;
+    color: var(--black);
+}
+
+.features .boxes figcaption{
+    font-size: 1.5rem;
+    padding: 1rem;
+    color: var(--light-color);
+}
+
+.products{
+    padding: 2rem 9%;
+}
+
+.products .boxes{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.products .boxes .box{
+    background-color: #fff;
+    margin: 1rem .5rem;
+    text-align: center;
+    border-radius: .5rem;
+    box-shadow: var(--box-shadow);
+    outline: var(--outline);
+    outline-offset: -1rem;
+    padding: 2rem 3rem;
+    flex-grow: 1;
+}
+
+.products .boxes .box:hover{
+    outline-offset: 0;
+    outline: .5rem solid rgba(0,0,0,0.1);
+}
+
+.products .boxes .box .price{
+    font-size: 2.1rem;
+    color: var(--light-color);
+    padding: 1rem 0;
+}
+
+.products .boxes .box h3{
+    font-size: 2.5rem;
+}
+
+.products .boxes .box .stars i{
+    font-size: 2rem;
+    color: var(--orange);
+}
+
+.products .boxes .box img{
+    width: 20rem;
+    height: 19rem;
+    padding: 2rem;
+}
+
+.products .boxes .box .btn{
+    margin: 1rem 0;
+}
+
+.products .boxes .box h3{
+    font-size: 2rem;
+    color: var(--black);
+}
+
+.category .boxes-container .box img{
+    width: 18rem;
+    height: 16rem;
+    padding: 2rem;
+    margin-bottom: 4rem;
+}
+
+.category .boxes-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.category{
+    padding: 2rem 9%;
+}
+
+.category .boxes-container .box{
+    background-color: #fff;
+    flex-grow: 1;
+    text-align: center;
+    margin: 1rem;
+    padding: 2rem;
+    border-radius: .5rem;
+    max-width: 250px;
+    outline: var(--outline);
+    outline-offset: -1rem;
+}
+
+.category .boxes-container .box:hover{
+    outline-offset: 0;
+    outline: .5rem solid rgba(0,0,0,0.1);
+}
+
+.category .boxes-container .box .off{
+    font-size: 2.1rem;
+    color: var(--light-color);
+    padding: 1rem 0;
+}
+
+.category .boxes-container .box  h3{
+    font-size: 2.5rem;
+}
+
+
+.review .review-slider{
+    padding: 2rem 9%;
+}
+
+.review .review-slider .box{
+    background-color: #fff;
+    text-align: center;
+    margin: 1rem;
+    padding: 2rem;
+    border-radius: .5rem;
+    outline: var(--outline);
+    outline-offset: -1rem;
+    flex-basis: 30rem;
+    flex-grow: 1;
+}
+
+.review .review-slider .box img{
+    width: 10rem;
+    height: 10rem;
+    border-radius: 50%;
+}
+
+.review .review-slider .box p{
+    color: var(--light-color);
+    padding: 1rem 0;
+    line-height: 2.8rem;
+    font-size: 1.5rem;
+}
+
+.review .review-slider .box h3{
+    color: var(--black);
+    font-size: 2.5rem;
+}
+
+.review .review-slider .box .stars i{
+    color: var(--orange);
+    font-size: 2rem;
+}
+
+.review .review-slider .box:hover{
+    outline-offset: 0;
+    outline: .5rem solid rgba(0,0,0,0.1);
+}
+
+.review .wrapper{
+    display: flex;
+}
+
+
+
+.footer{
+    background-color: #fff;
+    padding: 2rem 9%;
+    margin-top: 5rem;
+}
+
+.footer .copyright{
+    text-align: center;
+    font-size: 1.5rem;
+    color: var(--light-color);
+    padding-top: 1rem;
+    letter-spacing: .1rem;
+}
+
+.footer .box{
+    flex-basis: 30rem;
+    margin-right: 1rem;
+    flex-grow: 1;
+}
+
+.footer .box-container{
+    display: flex;
+    padding-bottom: 3rem;
+}
+
+.footer .first a{
+    font-size: 3rem;
+    color: black;
+    display: block;
+    padding: 1rem 0;
+    display: inline-block;
+}
+
+.footer .first p{
+    font-size: 1.6rem;
+    color: var(--light-color);
+    padding: 1rem 0;
+}
+
+.footer .first .social-links{
+    display: flex;
+    padding: 1rem 0;
+}
+
+.footer .first .social-links div{
+    height: 4.5rem;
+    width: 4.5rem;
+    border-radius: .5rem;
+    background-color: #eee;
+    color: var(--black);
+    font-size: 2rem;
+    margin-right: .3rem;
+    text-align: center;
+    line-height: 4.5rem;
+    display: inline-block;
+    margin-right: .5rem;
+}
+
+.footer .first .social-links div:hover{
+    background-color: var(--orange);
+}
+
+.footer .first a i{
+    color: var(--orange);
+}
+
+.footer .first p{
+    line-height: 2.5rem;
+}
+
+.footer .fourth img{
+    width: 8rem;
+    height: 4rem;
+}
+
+.footer h3{
+    padding: 1rem 0;
+    color: var(--black);
+    font-size: 3rem;
+}
+
+.footer p{
+    font-size: 1.5rem;
+    color: var(--light-color);
+    padding: 1rem 0;
+}
+
+.footer p i{
+    margin-right: .5rem;
+    color: var(--orange);
+    font-size: 2rem;
+}
+
+.footer .fourth input{
+    padding: 1rem 2rem;
+    border-radius: .6rem;
+    background-color: #eee;
+    border: none;
+    height: 5rem;
+    font-size: 1.5rem;
+}
+
+.f0oter .fourth .btn {
+    margin: 2rem 0;
+}
+
+.footer .fourth .box-images{
+    display: flex;
+    padding: 1rem 0;
+}
+
+.footer .fourth .box-images img{
+    margin: 0 .5rem;
+}
+
+
+
+
+
+
+
+
+
+
+/* Media Queries  */
+
+@media only screen and (max-width: 1200px) {
+    .footer{
+        padding: 2rem;
+    }
+    .footer .box{
+        margin: 3rem 1rem;
+    }
+    .footer .box-container{
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .footer .btn{
+        display: block;
+        width: 20rem;
+    }
+    
+}
+
+@media only screen and (max-width: 1000px) {
+    .header{
+        padding: 2rem;
+    }
+    .review .review-slider{
+        padding: 2rem;
+    }
+    html{
+        font-size: 58%;
+    }
+    .features .boxes{
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .features .boxes .box{
+        flex-basis: 30rem;
+        flex-grow: 1;
+    }
+}
+
+
+@media only screen and (max-width: 768px) {
+    #menu-btn{
+        display: inline-block;
+    }
+    .header .navbar{
+        position: absolute;
+        top: 110%;
+        right: -110%;
+        width: 30rem;
+        box-shadow: var(--box-shadow);
+        background-color: #fff;
+        padding: 1rem;
+        border-radius: .5rem;
+    }
+    .header .navbar.active{
+        right: 2rem;
+        transition: all .4s linear;
+    }
+    .header .navbar a{
+        display: block;
+        margin: 2rem;
+    }
+    html{
+        font-size: 55%;
+    }
+    .review .wrapper{
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .review .review-slider .box{
+        flex-grow: 0;
+    }
+    
+}
+
+
+@media only screen and (max-width: 450px) {
+    html{
+        font-size: 50%;
+    }
+    .header .search-form{
+        width: 90%;
+    }
+    .features .boxes .box{
+        min-width: 100%;
+    }
+    .category .boxes-container .box{
+        max-width: 90%;
+    }
+    .review .review-slider .box{
+        flex-grow: 1;
+    }
+}
